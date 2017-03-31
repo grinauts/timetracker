@@ -1,0 +1,42 @@
+header {
+  min-height: 50px;
+  background-color: #999;
+  line-height: 49px;
+  padding: 5px;
+}
+
+.container {
+  background-color: blue;
+}
+
+header .user-name {
+  float: right;
+}
+
+nav {
+  min-height: 35px;
+  background-color: #aaa;
+}
+
+nav ul {
+  display: block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: block;
+  padding: 0px 10px;
+  float: left;
+  line-height: 34px;
+  border-right: 1px solid #666;
+}
+
+nav ul li:last-child {
+  border-right: none;
+}
+
+nav ul li.selected {
+  background-color: aquamarine;
+}
