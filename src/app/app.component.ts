@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app works!';
   userName = 'Joe Smith';
+
+  handleEntryRequest() {
+    console.log('Request handled');
+  }
 }

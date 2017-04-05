@@ -1,5 +1,5 @@
-<div>
-  <span>Project 1</span>
-  <span>Task 1</span>
-  <span>Hours</span>
+<div class="container" (click)="entryClick.emit(entry)" >
+  <span>{{entry.project_name}}</span>
+  <span>{{entry.task_name}}</span>
+  <span>{{entry.hours}}</span>
 </div>

@@ -4,3 +4,15 @@
   width: 100%;
   background-color: #0f0;
 }
+
+.entry-list {
+  list-style: none;
+  display: block;
+  margin: 0;
+  padding: 5px;
+}
+
+.entry-list li {
+  padding: 5px;
+  overflow: hidden;
+}
