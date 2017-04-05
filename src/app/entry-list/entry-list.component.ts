@@ -1,41 +1,26 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { EntryService } from '../services/entry.service';
+import { ProjectService } from '../services/project.service';
 
 @Component( {
   selector: 'app-entry-list',
   templateUrl: './entry-list.component.html',
-  styleUrls: [ './entry-list.component.css' ]
+  styleUrls: [ './entry-list.component.css' ],
+  providers: [EntryService]
 } )
 export class EntryListComponent implements OnInit {
 
+  entries;
+  projects;
   @Output() entryRequest = new EventEmitter();
 
-  entries = [
-    {
-      project_name: 'First Project',
-      task_name: 'Main Task',
-      hours: 9
-    },
-    {
-      project_name: 'Second Project',
-      task_name: 'Main Task',
-      hours: 8
-    },
-    {
-      project_name: 'Third Project',
-      task_name: 'Main Task',
-      hours: 2
-    },
-    {
-      project_name: 'Fourth Project',
-      task_name: 'Main Task',
-      hours: 5
-    }
-  ];
+  constructor(private entryService: EntryService, private projectService: ProjectService) {
 
-  constructor() {
   }
 
   ngOnInit() {
+    this.entries = this.entryService.fecthAll();
+    this.projects = this.projectService.fetchAll();
   }
 
   handleClick( value: any ) {

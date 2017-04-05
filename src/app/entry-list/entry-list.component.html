@@ -5,5 +5,10 @@
       <app-entry-item [entry]="nextEntry" (entryClick)="handleClick($event)"></app-entry-item>
     </li>
   </ul>
+  <ul>
+    <li *ngFor="let project of projects">
+      {{project.name}}
+    </li>
+  </ul>
 
 </div>
